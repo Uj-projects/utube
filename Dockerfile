@@ -7,8 +7,8 @@ WORKDIR /usr/src/app
 
 RUN cd utube
 RUN python3 -m venv venv
-RUN python3 -m venv venv
-COPY requirement.txt.
+RUN source venv/bin/activate
+COPY requirement.txt./
 RUN pip3 install -r requirements.txt
 
 
