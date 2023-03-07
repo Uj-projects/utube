@@ -1,11 +1,18 @@
-RUN git clone https://github.com/odysseusmax/utube.git
+FROM python:3
+
+WORKDIR /usr/src/app
+
+
+
 
 RUN cd utube
-
 RUN python3 -m venv venv
-
-RUN source venv/bin/activate
-
+RUN python3 -m venv venv
+COPY requirement.txt.
 RUN pip3 install -r requirements.txt
 
-RUN python3 -m bot
+
+CMD python3 -m bot
+
+
+
